@@ -1,0 +1,77 @@
+---
+title: "Clase 03"
+output: html_notebook
+---
+
+## Factores 
+```{r}
+factores <- factor(rep(c("A", "B", "C"), 5))
+factores
+```
+```{r}
+factores_num <- factor(rep(c(2, 3), 3))
+factores_num
+```
+```{r}
+factores
+factores[1] <- 'D'
+factores
+```
+Mostrar los niveles de un factor
+
+```{r}
+levels(factores)[4] <- "D"
+levels(factores)
+
+```
+```{r}
+factores
+factores[1] <- 'D'
+```
+# Data frames
+```{r}
+Nombre <- c("Ana", "Juan", "Claudia")
+Edad <- c(45, 52, 26)
+Peso <- c(64, 75, 67)
+```
+
+Con los vectores creamos el Data Frame
+```{r}
+df <- data.frame(Nombre, Edad, Peso)
+df
+
+```
+
+```{r}
+class(df)
+```
+
+```{r}
+colnames(df)
+```
+```{r}
+rownames(df)
+```
+Muestra la estructura del dataframe
+```{r}
+str(df)
+```
+
+## Acceder a los elementos del dataframe
+```{r}
+df[1]
+```
+```{r}
+df["Nombre"]
+```
+
+Otra forma 
+```{r}
+df$Nombre
+```
+
+
+
+
+
+
