@@ -418,11 +418,357 @@ df</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>Extraer un vector de un data frame</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZfbnVldm8gPC0gZGZbXCJFZGFkXCJdXG5jbGFzcyhkZl9udWV2bylcbmBgYCJ9 -->
+<pre class="r"><code>df_nuevo &lt;- df[&quot;Edad&quot;]
+class(df_nuevo)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZGF0YS5mcmFtZVwiXG4ifQ== -->
+<pre><code>[1] &quot;data.frame&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZfbnVldm9cbmBgYCJ9 -->
+<pre class="r"><code>df_nuevo</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6MSwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZlssMV0gWzMgeCAxXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJsMVB5d3JDTUJEYzFFWXhvQWgrUnd1dGVQRWsrRGg0RWsrOXhyWnFzU2JTUnZUb2w2dWJOaEZOSVdSM09qT1oyUzJUQ1VzWUFIVEF4OU9oT0VKM3NZM2lhUXpnZTdnUi9OUFg5d05aNHdZQUdHckpmUDNVZEpodm9MMW5ZTDQvSVJYOGt0YzRqSDVBZjVYeHpDSDJLM2tQTFhtQXgydjlNWmpqbUphOGRoMVp4aFVQRHhYcWNYczVrcDY4cWtJS0ZIbTZBM1hFcEhLQTBVM29KRm1Rbm03aUhFU1Jmc0dVQnhPUHRORytNMm5mOU43R2l4cXZiaTZPaGNodCtKTHY4OUlzUTZ6Y05BNnZWU0dVcllKb0hTcXB1T1d4VkpZV2FjckI2d016VEU1UnZBRUFBQT09In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Edad"],"name":[1],"type":["dbl"],"align":["right"]}],"data":[{"1":"45"},{"1":"52"},{"1":"26"}],"options":{"columns":{"min":{},"max":[10],"total":[1]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Extraer “Nombre” y “Peso”</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZbYygxLCAzKV1cbmBgYCJ9 -->
+<pre class="r"><code>df[c(1, 3)]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6Miwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZlssMl0gWzMgeCAyXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJsMVBRV3JETUJEY1NGWkNEQW1CdmlPR3VQU2VrcDU2S0NhblhEZTIycG9xVXBCbDJtT2YxcGVsWFZrU0ZBbk16czd1N0hpT1Q2Zjc4bFFDQUllQ1BpNEl3dnpRN09xSEdxQmcxTTFvc3ZUMWk3YnVDSGh5RXlWK3dCODFSbGc4ajZnalhod1VqbDJQQk5kK2E5L0E5UGJIbjFDYlVETWJvZkVpaDJqQklqbC9NWmV6bGNtbGtZUEpaRXRyUHFza1hYbnBkempPOC91dHdpSGRUMlRab2NQcTFaS2V1bHNtV1ppcjY0MG1FZlA1UlNhZTJZellqTnIvU2JkdDMwZjlzZDNWM21HYWg3ZUttUC9ETEhpeTMzaExwT1JTdi9VNkpSY0t6MUxGWmsyUnA4VFYxZmJhcFNqRURwVXpEdE5lMlJxVm1Da2MzUDRBZWNySXUvZ0JBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Nombre"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Peso"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"Ana","2":"64"},{"1":"Juan","2":"75"},{"1":"Claudia","2":"67"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Lo mismo con la etiqueta de la variable</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZbYyhcIk5vbWJyZVwiLCBcIlBlc29cIildXG5gYGAifQ== -->
+<pre class="r"><code>df[c(&quot;Nombre&quot;, &quot;Peso&quot;)]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6Miwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZlssMl0gWzMgeCAyXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJsMVBRV3JETUJCVUpDc2hob1JBM3hGREVucFBTVTg5RkpOVHJodGJhVTBWS2NneTdiRlA2OHZTcml3dEZBbk16czd1N0hpT3o2ZGRlU29aWTRJVitBbUprRTBQOVdiN3VHV3M0TmhOY0RJUDlRdTNIaEFFY3BVa1lTQ2VEQ1JZdkF4Z0VwNGROQXh0QndpWFlXdGZzL0h0anoreDFyRm1OdExBVmZYSmdpZHkrbXF2WjZmSXBWYTl6V1J6Wno4cmtpNkM5RHNlRi9uOVJrTlA5NGtzVy9CUVhSenFzYnRua3BtOStjNGFGUEdRWDJiaWljdUkxV0RDbjdUcjVuMHdIK3ZOTGppTTgvZ1dDWXQvbUVkUC9wdHVTVXF1ekZ0bktMblVjRlk2TlV1TVBDYXVicTR6bnFJZzIxZmVlcUM5c3JHYW1ERWN1LzhCVytpVzJQZ0JBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Nombre"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Peso"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"Ana","2":"64"},{"1":"Juan","2":"75"},{"1":"Claudia","2":"67"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Agregar una columna</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYgPC0gY2JpbmQoZGYsIENhc2FkbyA9IGMoJ1NpJywgJ1NpJywgJ05vJykpXG5kZlxuYGBgIn0= -->
+<pre class="r"><code>df &lt;- cbind(df, Casado = c(&#39;Si&#39;, &#39;Si&#39;, &#39;No&#39;))
+df</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6NCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZlssNF0gWzMgeCA0XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJtVlF5MjdDTUJCY0VnZEVKR2lsZmdlUkFQWFNFMVhhSGppZ0NDNWNsemlsVVlPTjhsQjc3S2Z4WmJUcjJDc2gxNUxsMmNmczdIajdzbC9HK3hnQVFoQjB3NGdnRE5Oc3ZuaGNBSWlBb2dGVnh1YjlwcTRIQW9MdXZhT1lRdmlzMEVHeDdsQTVQRW9yN0dTSkJLZW1hL1gyWTRiRGFnMzJmUUkrdHA2NS9QWmkzK3pDOVZ1MVlGZitSeHZ0TFJzcFBCV05vd3FYSEc3MDZWQVh2T3VyUk1rNEt4ck5YU2syS1AyQjQxcC9KVHgwWWpTdEc5ckxVODRyYkZpWms3SEVGcFAzbXZnVVhUM0tTSi9iVWlzaUJlWi9JNDg4cUwzRVhhZk1KbktXZjNUcWN6WTNBbjNabm9uRDRRMFdWakw0ZGFNaU5sdW9ZNm40UzZJS0QwWGxnaWs1N2cwbjU3cFVMVHVoYkpPMHVrWHVpM05kY2FiM0J0Yy9nYnQ4d0ZjQ0FBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Nombre"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Edad"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Peso"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Casado"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"Ana","2":"45","3":"64","4":"Si"},{"1":"Juan","2":"52","3":"75","4":"Si"},{"1":"Claudia","2":"26","3":"67","4":"No"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Acceder a los dos primeras filas</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZbMToyLCBdXG5gYGAifQ== -->
+<pre class="r"><code>df[1:2, ]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MiwibmNvbCI6NCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZlssNF0gWzIgeCA0XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJsMVFUVS9ETUF4TjAyUm9sUmhJL0k1Vm9vaDcwWURERHFqYUxydDZiZGtxdW1SS1VzR1JuOFl2R3podGpMWkdzdno4L1BXYzFmUG1JZGtrakxHWUNiUllJbVNUUlhHZlBXYU1DWTVSaEptcDkxOVlkWWRBb04yaThaQ0lueFFFS0pZZEtQUXpuODVmdi8wMGxpOFp2WUV2aGlCZi9SQi9QbzZ2bXpOMHFVRXFPTlEyTkloQVR0NzBZV3Rxa3ZCU1FVVzRxSzJtcWdWWXFQUm80TlRvejVTR1h2Y3FmTEwzbDV2TEZpeHRKaktwd0VINmJyQWZvOU9vNVVvZlhhTVZObkgvYlhMVUhKa1JjZE1wcjZTYWwvdE9mY3d6dnlDb2lZSzZvT3dmaTJFbC93MmpKQjFicTEyajZFdGtDOXU2RGNFTUwrNFBUbyttVVk0dVFkYW1UanVndXFUVUxUSDliZXowQjZvTEN2Z3VBZ0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Nombre"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Edad"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Peso"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Casado"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"Ana","2":"45","3":"64","4":"Si","_rn_":"1"},{"1":"Juan","2":"52","3":"75","4":"Si","_rn_":"2"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[2]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Algo un poco más complejo</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZbMTozLCBjKFwiTm9tYnJlXCIsIFwiUGVzb1wiKV1cbmBgYCJ9 -->
+<pre class="r"><code>df[1:3, c(&quot;Nombre&quot;, &quot;Peso&quot;)]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6Miwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZlssMl0gWzMgeCAyXSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJsMVBRVTdETUJEYzJuR3JSbXBCNGgyTlJGdnVSZVhFQVVVOTlicE5ERVM0ZHVVNGdpTlA0MldGZFd4THlKR3NuWjNkMmNrY25vNmI4bGdDQUllQ0hoY0VZYnF2NzljUGE0Q0NVVGVoeWR6WEw5cTZJK0RKMnlqeEEvNm9NY0xpZVVBZDhXeXZjR2c3SkxqMFc3c2F4bTkzK0FtMURqV3pFUnJQc284V0xKTFRGM00rV1psY2F0bWJURGEzNXJOSzBvV1hmb2ZqUEwvZktPelQvVVNXTFRxc1hpM3BxYnRta3BtNXVNNW9FakdmWDJUaWljMkltMEg3UDJsWHpmdWdQMVpiYnpDT3cxdkV5djloRml6WmJ6d2xVbkNwM3pxZGdndUZKNmxpczZURVkrRHFZanZ0VWhKaSs4b1poMm12Ykl4S3pKZ05ybi9CZUxraDl3RUFBQT09In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Nombre"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Peso"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"Ana","2":"64","_rn_":"1"},{"1":"Juan","2":"75","_rn_":"2"},{"1":"Claudia","2":"67","_rn_":"3"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Buscar condiciones</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZbZGYkRWRhZCA8IDMwICYgZGYkQ2FzYWRvID09ICdObycsIF1cbmBgYCJ9 -->
+<pre class="r"><code>df[df$Edad &lt; 30 &amp; df$Casado == &#39;No&#39;, ]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MSwibmNvbCI6NCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZlssNF0gWzEgeCA0XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJsMVF3V3JETUF4MVVydWxnWFdEZlVjRGErbGxwMEcyYXdrNzlhckczaGJxMnNWMjJENXZYOVpOVGkwSU5oaS9KK2xKZW41L1BXeXJROFVZbXpHT2R5WVFzbm5UUG0xMkc4WjRpYXpBekRLK1AxajFpSURqZlpna0ZvMkdRZmFBY0JYREw4K016bzIzdjhTbnNuSnZzd25Dd0ZuNVZNWlRjTDYzNTZOVGlmRTNDWkp3cTd5bHFnWTh5THpoMHRudm1wcmVqWW5vTkp2YWFmQStXNjZTRUtEK2NLaEZkczBrQzNzSnZUVW9LdU9IaUV4Y3VDeHdQNWk0aFZ4M1g0TTVyYmR4UU5xbW1HdzJ4Zncyc3Z4THJRUVpWZWF6Ti9RZFFzTlI2VVJXNkhZMFcxOWNid0k1d2Fpdmd3MUFkVlZuTlVWR2IrejZEKzlYVlpFSUFnQUEifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Nombre"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Edad"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Peso"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Casado"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"Claudia","2":"26","3":"67","4":"No","_rn_":"3"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[1]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="modificar-los-valores-de-un-data-frame" class="section level2">
+<h2>Modificar los valores de un data frame</h2>
+<p>Agregar un tipo de contrato</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYkVGlwb19Db250cmF0byA8LSBjKFwiUHJlbWl1bVwiLCBcIkJhc2ljb1wiLCBcIkJhc2ljb1wiKVxuZGZcbmBgYCJ9 -->
+<pre class="r"><code>df$Tipo_Contrato &lt;- c(&quot;Premium&quot;, &quot;Basico&quot;, &quot;Basico&quot;)
+df</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6NSwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZlssNV0gWzMgeCA1XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJtVlJ5MDdETUJBMGViUnFwQlFrdnFPUktIRGhWQWh3NktHS0NvZmUwRFlKWUpIWWtlTUlqbnhhdjZ5d2JyeFZNSllzeit6T1ByMiszMXhHbTRneDVyTUFyeDhpWktNMHU1aGZ6eGtMUEdRbjZKbVk5d3RWNXdpTTVzeUdHSWQvSzhEQ1lObUJzSGljVnRBVkhCQk9qV3J4K0cyU3M4V1M5ZThObzlQN00ydGY3L28zMjVGL1dNMTc0di9SU2pxcWNhYkttbmUxcGFNN2FIa3VIZlozdmxCQVhiWTJUMGpTbGF5M3FxVHhIZ29vQ0dkbGUweVlRZ3NGc2ZpWk4vSWxsVUlyMEc2VmlaS2ZDVldLVGUvOVZyQnpwNTI4Z3BiYUlXTlVnSWJrVldFOHNyMFRNcGFONWxKZ2tEZjhwK01IS3NkdzJnblRTVEhMM3p2eE1ic3lCUTd1L3NRVyt3TWM5aVc5SDNkUHBYampndllVVnJBdEswdW1PUEZoNEtSUlhHaWFCSzF0b3FVRzBrVzVyTWh5bUkzdGZ3RjQxN056bndJQUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Nombre"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Edad"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Peso"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Casado"],"name":[4],"type":["chr"],"align":["left"]},{"label":["Tipo_Contrato"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"Ana","2":"45","3":"64","4":"Si","5":"Premium"},{"1":"Juan","2":"52","3":"75","4":"Si","5":"Basico"},{"1":"Claudia","2":"26","3":"67","4":"No","5":"Basico"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Transformar la variable Tipo_contrato a un factor</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYXMuZmFjdG9yKGRmJFRpcG9fQ29udHJhdG8pKVxuYGBgIn0= -->
+<pre class="r"><code>class(as.factor(df$Tipo_Contrato))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZmFjdG9yXCJcbiJ9 -->
+<pre><code>[1] &quot;factor&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Eliminar una variable</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYkUGVzbyA8LSBOVUxMXG5gYGAifQ== -->
+<pre class="r"><code>df$Peso &lt;- NULL</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZcbmBgYCJ9 -->
+<pre class="r"><code>df</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6NCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZlssNF0gWzMgeCA0XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJtVlFVVXZETUJETzJuUmxoVTdCMzdHQ0UwRjhtbFo5Mk1NWTZzUGU1TlpXRGJaSlNWUDAwVjgrdmJRNW1ERVE4dDNkZDErK3U4ZTczVVd5U3hoakllTjR3d2dobStiYjgrWGxrakVlWURUQnlzeStYOGc2UThEeG5yb1dXd2h2SkRqSTF6MUloK084aHI0VWdIQnVXYXVIYnl2T1ZtczJ2dGVNenJGYThDVCtvNDN5V1BGV1Y0M29HeGRPYjZFVGhmS2l2LzRqQ1UzVk9SMU8xSTFxOXJvaSsvY2xsRlRKb1lPU0pOTm4wYXFYWEVtandmaktNNjArTTFKUHJkOXhVblRyV1NocTZNZ0NKWk1TREdTdkd2c3hPbmd0c1dxTlVCS2JBcnY3eUd1ZWFDOXgwa3ZycEZ3VTc3MzhXRnpaRDRieWVGS0h3eVBNeHkrREh5Y1YwUVlxK1NZazdTYXFZVi9WTHBqanhNUEFXYXVGTkRRSlpydk1LQVBFU3dwVlUyYVlqUjErQVJxMFlEeHpBZ0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Nombre"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Edad"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Casado"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Tipo_Contrato"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"Ana","2":"45","3":"Si","4":"Premium"},{"1":"Juan","2":"52","3":"Si","4":"Basico"},{"1":"Claudia","2":"26","3":"No","4":"Basico"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Nombres de las columnas</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbmFtZXMoZGYpXG5gYGAifQ== -->
+<pre class="r"><code>colnames(df)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiTm9tYnJlXCIgICAgICAgIFwiRWRhZFwiICAgICAgICAgIFwiQ2FzYWRvXCIgICAgICAgXG5bNF0gXCJUaXBvX0NvbnRyYXRvXCJcbiJ9 -->
+<pre><code>[1] &quot;Nombre&quot;        &quot;Edad&quot;          &quot;Casado&quot;       
+[4] &quot;Tipo_Contrato&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmlsYSA8LSBkYXRhLmZyYW1lKE5vbWJyZSA9ICdQYXVsYScsIEVkYWQgPSA0NSwgQ2FzYWRvID0gJ1NpJywgVGlwb19Db250cmF0byA9ICdQcmVtaXVtJylcbmZpbGFcblxuYGBgIn0= -->
+<pre class="r"><code>fila &lt;- data.frame(Nombre = &#39;Paula&#39;, Edad = 45, Casado = &#39;Si&#39;, Tipo_Contrato = &#39;Premium&#39;)
+fila
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Agregamos la fila</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYgPC0gcmJpbmQoZGYsIGZpbGEpXG5gYGAifQ== -->
+<pre class="r"><code>df &lt;- rbind(df, fila)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZcbmBgYCJ9 -->
+<pre class="r"><code>df</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NCwibmNvbCI6NCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZlssNF0gWzQgeCA0XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJtMVJ5MDdETUJCMDgxUWpwU0R4SFkxRWdRdW5Rb0JERDFVRUhIcEQyeVNBaFdOSGppTTQ4dVdGZFdJallyQms3ZXpzYyt6N205MVpza3NJSVQ0SjhQb2hRaExseGVucVlrVkk0S0UzdzhoYzJ3L01Pa0VRNEQwZTdCandyemdZR0d4NjRBYkhPWU8rb2pZVUZ0QXpRTERRZWV1N1R6MkpyRGRrdEpmR0d0NFo0VDNRdjJncmZuSFQvTGlRZFVQN3hyalJOWFMwRlA5NlA2bFR0U0dIcHU2Y3R0RldOSHRaVzdHM0ZWUTJra01IbGUyWlB0SldQT1dDS3dsS09KM25VcnhudG51cTF6ZVNBM2VGa2tGblY3QmtVb0dDN0ZsaVBYb0hweVFXcmFLQ1k1R25meXAwaW1mU0lZNTZyamVwbHVWcno5K1c1M3JBRUI1UGFuQXd4WHFrOTJWYWhmWUZhdjVDdVgyYmtNRytac1pab09KQmNOWkt5cFZWZ215WEthSEE1aVdsWUpZWnRKSEROMjI3V29XaEFnQUEifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Nombre"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Edad"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Casado"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Tipo_Contrato"],"name":[4],"type":["chr"],"align":["left"]}],"data":[{"1":"Ana","2":"45","3":"Si","4":"Premium"},{"1":"Juan","2":"52","3":"Si","4":"Basico"},{"1":"Claudia","2":"26","3":"No","4":"Basico"},{"1":"Paula","2":"45","3":"Si","4":"Premium"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Volvemos a agregar la variable Peso</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuUGVzbyA8LSBjKDYwLCA4MiwgOTIsIDU1KVxuZGYgPC0gY2JpbmQoZGYsIFBlc28pXG5kZlxuYGBgIn0= -->
+<pre class="r"><code>Peso &lt;- c(60, 82, 92, 55)
+df &lt;- cbind(df, Peso)
+df</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NCwibmNvbCI6NSwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZlssNV0gWzQgeCA1XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJtMVJVVXZETUJDT1hicXh3cWJnNzFqQnlWNThtbFo5bURDS0R0eWIzTnFxd1RZWmFZbysrc3VubCsxdWJOVkF5SGZmM2ZGOWQzbThYVjVHeTBnSTBSRVNieWRFS0xwSmVqR2VqSVdRQVVZbm1Pbjc5d3VyemhING1qTzhraEtkYXcwRTVhd0JUYmlYbE5Ea2lsTmhDazBKQ0lhK2Juci83WlhFZENaMjd4Vzl4TGNrZ2lmMUY4M05BWGRjMzB0dFVhbW1vckI3QTdYS3pML1J2cFNkemNuSmdodytVL3pBem82MkVtcW9pcHJrUTFhWW0ycGxDMTdLWFE0NVp4S29JV2Z0d1VLdHpVdGl0TFBnbUpScFVadVdTdCthejVpVkJuNWtNaVBiZHJJU2FyYkRaSlNEZy9qVllqOUdtMVpMejZ5ZE1ocWJnc1BmM1grN2JSR25qZlpPOGxIMjN1aVAwY1FMYk5PN015QXNEM0M0a3d4KzJuc3E5SnZTdktld2hGVlJVakRFaWJjRHgydXJ0T05Ka0sxalp4eHdYWlNaa3BudGJHTHpDM2U3aW9EVkFnQUEifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Nombre"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Edad"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Casado"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Tipo_Contrato"],"name":[4],"type":["chr"],"align":["left"]},{"label":["Peso"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"Ana","2":"45","3":"Si","4":"Premium","5":"60"},{"1":"Juan","2":"52","3":"Si","4":"Basico","5":"82"},{"1":"Claudia","2":"26","3":"No","4":"Basico","5":"92"},{"1":"Paula","2":"45","3":"Si","4":"Premium","5":"55"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="tuberías-pipe" class="section level2">
+<h2>Tuberías (Pipe)</h2>
+<p>Los tidy data</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZfbm90ZCA8LSBkYXRhLmZyYW1lKFllYXI9YygyMDE1LCAyMDE2LCAyMDE3LCAyMDE4LCAyMDE5KSwgTWFyaWE9Yyg1NSwgNjAsIDU3LCA2NSwgNzApLCBQZXBlPWMoNzUsIDgwLCAxMDAsIDExMCwgODUpLCBQYWNvID0gYyg3MCwgNzIsIDcxLCA3MCwgODApKVxuZGZfbm90ZFxuYGBgIn0= -->
+<pre class="r"><code>df_notd &lt;- data.frame(Year=c(2015, 2016, 2017, 2018, 2019), Maria=c(55, 60, 57, 65, 70), Pepe=c(75, 80, 100, 110, 85), Paco = c(70, 72, 71, 70, 80))
+df_notd</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NSwibmNvbCI6NCwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZlssNF0gWzUgeCA0XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJsMVB5MDdETUJCMFU3dW9rVnFRK2gyTlJCR2NMY0dOaDlJSXBGYWNUR29nSXRpUjR3b09ISHJnd0lGLzZLLzB5d3FiZUkySUxhMTJkM1oyMXBOZExFN2lSVXdJNlJNSzBXZFFrc0Y1ZWp3N25SRkNJK2g2TUJrMitSMVlFeWdveEJpQzhlMUhReWQ4dThIOGlma0w4emZCNS9pWHlMdHhJTC9DUHVVdXp6ZGRmclp6K0MzeWw1anZjZStPZC9tNHp6UGt6WGNkWGE4VEdHTkt2TW9haXFQV25BUHBVZ3JqQ2RmQ0ZNSVBVbG5KdjFya09sQWJHdjJXZU1VUlJJU21XSGcyTDBYdHozb3dYZ2tya2tjRCs5RHRnNVVEWGRsQ0sxaUtKazZ4czl3ekFYQzRWczFQVnRQOGVhMWVwbWZOZ1hiczNnaHI5cSttN21UMGcxSU1wUVpTUFJYS0cyZWxlSkFsTm1OdzNCcE9LbE1vNjUwQVdpZFdXK0Y1Y2E1TGo3VGV5UDRYb0x6VE00QUNBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Year"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Maria"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Pepe"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Paco"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"2015","2":"55","3":"75","4":"70"},{"1":"2016","2":"60","3":"80","4":"72"},{"1":"2017","2":"57","3":"100","4":"71"},{"1":"2018","2":"65","3":"110","4":"70"},{"1":"2019","2":"70","3":"85","4":"80"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[5]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Otra forma de observar los datos</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5kZl93aWRlPC0gZGF0YS5mcmFtZShOb21icmU9YyhcIk1hcmlhXCIsIFwiUGVwZVwiLCBcIlBhY29cIiksXG4gICAgICAgICAgICAgICAgICAgICBZZWFyXzIwMTU9Yyg1NSwgNzUsIDcwKSwgXG4gICAgICAgICAgICAgICAgICAgICBZZWFyXzIwMTY9Yyg2MCwgODAsIDcyKSxcbiAgICAgICAgICAgICAgICAgICAgIFllYXJfMjAxNz1jKDU3LCAxMDAsIDcxKSxcbiAgICAgICAgICAgICAgICAgICAgIFllYXJfMjAxOD1jKDY1LCAxMTAsIDcwKSxcbiAgICAgICAgICAgICAgICAgICAgIFllYXJfMjAxOT1jKDcwLCA4NSwgODApKVxuZGZfd2lkZVxuYGBgIn0= -->
+<pre class="r"><code>
+df_wide&lt;- data.frame(Nombre=c(&quot;Maria&quot;, &quot;Pepe&quot;, &quot;Paco&quot;),
+                     Year_2015=c(55, 75, 70), 
+                     Year_2016=c(60, 80, 72),
+                     Year_2017=c(57, 100, 71),
+                     Year_2018=c(65, 110, 70),
+                     Year_2019=c(70, 85, 80))
+df_wide</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6Niwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZlssNl0gWzMgeCA2XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJtMVIwVXJETUJUTjJxYlN3cWJnZDZ5NHluUytCZlJOSFYxUjJQQkJzaTVxc1V0SzFxR1ArN1I5MmZTbVNZWU5Gc0s5NTV4N2MrOUo4N3Y1WlR5UEVVSStDdUQ0R0ZJVTNtYWpkSndpRkhpQWVxQkVLbjVEMWJtUzRaeVpGaVhnUnlwTGFrQ1FzWm9kYzFvSWlBTlZUTzUzNm01RThyMk9NNDJQK2xRRDhtUmlqcnI2ZytsZkdIMjI3K29aMGZ6TDd2LzdEU2JQcERQSGNZazVYYk9OY1JnYU1weUs5VkphVzlHQ1VmbWFYb3pHTG5IbEV0Y3VNWEdKRzJkK0pNVlhZbmZvdy9HTURkOWR0S2pveGk1cXlYaEZHNXE4U2VnSGRIQmFUa1RkbElKRGs2ZitJM2FhZTlJaFRyZGNiYklhRmg5Yi9qbWNxQUd0ckwrK3lmMC9lYWhIZWovbUtteGZrUEgza3RzWHhCVmRzc3FBQVRodURTZTFMSGxqblFDN1NSclJVRnNYRjZLeVRPc05IWDRCQWdMbXE3OENBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Nombre"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Year_2015"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Year_2016"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Year_2017"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Year_2018"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Year_2019"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"Maria","2":"55","3":"60","4":"57","5":"65","6":"70"},{"1":"Pepe","2":"75","3":"80","4":"100","5":"110","6":"85"},{"1":"Paco","2":"70","3":"72","4":"71","5":"70","6":"80"}],"options":{"columns":{"min":{},"max":[10],"total":[6]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="tidyverse" class="section level2">
+<h2>Tidyverse</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmBgYCJ9 -->
+<pre class="r"><code>library(dplyr)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog46S847ixZHBseXLjpLzjuLJcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDjpLzjuLFwYWNrYWdlOnN0YXRz46S847iyOlxuXG4gICAgZmlsdGVyLCBsYWdcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDjpLzjuLFwYWNrYWdlOmJhc2XjpLzjuLI6XG5cbiAgICBpbnRlcnNlY3QsIHNldGRpZmYsIHNldGVxdWFsLCB1bmlvblxuIn0= -->
+<pre><code>
+Attaching package: 㤼㸱dplyr㤼㸲
+
+The following objects are masked from 㤼㸱package:stats㤼㸲:
+
+    filter, lag
+
+The following objects are masked from 㤼㸱package:base㤼㸲:
+
+    intersect, setdiff, setequal, union</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5cilcbmBgYCJ9 -->
+<pre class="r"><code>library(tidyr)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Aplicar una tubería para pasar de un tipo de dato ancho a un tidy</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZfbG9uZyA8LSBkZl93aWRlICU+JSBnYXRoZXIoXCJZZWFyXCIsIFwiUGVzb1wiLCAyOjYpXG5kZl9sb25nXG5gYGAifQ== -->
+<pre class="r"><code>df_long &lt;- df_wide %&gt;% gather(&quot;Year&quot;, &quot;Peso&quot;, 2:6)
+df_long</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MTUsIm5jb2wiOjMsInN1bW1hcnkiOnsiRGVzY3JpcHRpb24iOlsiZGZbLDNdIFsxNSB4IDNdIl19fSwicmRmIjoiSDRzSUFBQUFBQUFBQnMxVFMwK0RRQkNlOHFpQnBNWEUzMUVpTmZWeEk5R2IyclNOSm0wOG1DMUZKZEpkc3REb3NUK3R2Nnc2QzdOVk9NbE5rc2szODgxcloyZVozY3pQM0xrTEFDWllLS2FOS25Tdko4RndOQVN3RExRNjZIRVVmbUxVU1JrS2NJemlrY08rWnpKaFpGaVRPSXNQT292RXZ3eXFEK0FzWWlhZmg2ZkJxRDF4M3A2NGFFOWN0aWV1L2tBQTlOVTFoTGRidFhZSVo3c0twMlNQb2NJSHdobmhIZmtYWkU4cGJ4SlcrTFN0MTlINEdOYnFOUjZZemRrNnptazNKcEhkc1ZndjVXRjc2dXcvVzgxRm80UWp4WWV2eS9SUWpLb3pycnJSSzBwWnJudHAwbDJ4Z3ZrdkV2UFIyamRTamtSV0pJSmprcUgrQXJ1UjNKRU53dHR3ZFpMVklIcmI4UGRCb0JxVTd1cnJrZTc5MHMycXBmRkZwV3g5Q1RGL1RiaStCRHRseXpnbG80OFRsd1A3bVV4NG9TZEJOdmNMVVRBZDUwWWkxVXc1Ryt5L0FSb2htdUw5QXdBQSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Nombre"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Year"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Peso"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"Maria","2":"Year_2015","3":"55"},{"1":"Pepe","2":"Year_2015","3":"75"},{"1":"Paco","2":"Year_2015","3":"70"},{"1":"Maria","2":"Year_2016","3":"60"},{"1":"Pepe","2":"Year_2016","3":"80"},{"1":"Paco","2":"Year_2016","3":"72"},{"1":"Maria","2":"Year_2017","3":"57"},{"1":"Pepe","2":"Year_2017","3":"100"},{"1":"Paco","2":"Year_2017","3":"71"},{"1":"Maria","2":"Year_2018","3":"65"},{"1":"Pepe","2":"Year_2018","3":"110"},{"1":"Paco","2":"Year_2018","3":"70"},{"1":"Maria","2":"Year_2019","3":"70"},{"1":"Pepe","2":"Year_2019","3":"85"},{"1":"Paco","2":"Year_2019","3":"80"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[15]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Aplicamos el inverso</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGZfbG9uZyAlPiUgc3ByZWFkKFwiWWVhclwiLCBcIlBlc29cIilcbmBgYCJ9 -->
+<pre class="r"><code>df_long %&gt;% spread(&quot;Year&quot;, &quot;Peso&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6Niwic3VtbWFyeSI6eyJEZXNjcmlwdGlvbiI6WyJkZlssNl0gWzMgeCA2XSJdfX0sInJkZiI6Ikg0c0lBQUFBQUFBQUJsMVJYVXZETUJUTjJxYlN3cWJnNzFpeGxmbnhGdEEzZGRTaHNPR0RaRjNVWXBlVXJFTWY5OVAyeTZZMzdZM1lCTUs5OTV5Y20zdVMyZTM4UEo3SGhCQ2ZCTEI5Q2lrSmIvSTBtMlNFQkI1VUEyQWlFNy9oMUttaFlaK2d4QkQwZ2V1U1l4SGt2RkIvdWFnRnhKRTV6TzUycGpkaGp4aG5lNEtyNDZjRWNZeFBwTS9mVzMybll3dUh6MW0vLzh1dXoxc2MrN0puaG5UUEpaVjhMVGJvTUVRd25LcjFVZ3Vzb29YZytqVTdTeWN1Y09FQ2x5NXc1UUxYenYyUlZsK0puV0VJMjBNYnZqdG9VZkdOSGRTQzhZbzNQSG5Ub0lmcTRFaU9WTjJVU29MSU0vOUlIZkZBTzhEeFZwcEpWdVBpWXlzL3g2bTVvS1c3TmNUYy81ZUgzWlhlRDdhaTlnV0ZmQytsZlVGYThhV29zQmlCNDlad1V1dFNOdFlKb0p1a1VRMjM1K0pDVlJacHZaSERMMjRzdWptL0FnQUEifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Nombre"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Year_2015"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Year_2016"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Year_2017"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Year_2018"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Year_2019"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"Maria","2":"55","3":"60","4":"57","5":"65","6":"70"},{"1":"Paco","2":"70","3":"72","4":"71","5":"70","6":"80"},{"1":"Pepe","2":"75","3":"80","4":"100","5":"110","6":"85"}],"options":{"columns":{"min":{},"max":[10],"total":[6]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="operadores-lógicos" class="section level2">
+<h2>Operadores lógicos</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueCA8LSAxMFxueCA+IDcgJiB4ID4gMjBcbmBgYCJ9 -->
+<pre class="r"><code>x &lt;- 10
+x &gt; 7 &amp; x &gt; 20</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFXG4ifQ== -->
+<pre><code>[1] FALSE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIVRSVUVcbmBgYCJ9 -->
+<pre class="r"><code>!TRUE</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFXG4ifQ== -->
+<pre><code>[1] FALSE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIWlzLm51bWVyaWMoNSlcbmBgYCJ9 -->
+<pre class="r"><code>!is.numeric(5)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFXG4ifQ== -->
+<pre><code>[1] FALSE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkNsYXNlIDAzIg0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KIyMgRmFjdG9yZXMgDQpgYGB7cn0NCmZhY3RvcmVzIDwtIGZhY3RvcihyZXAoYygiQSIsICJCIiwgIkMiKSwgNSkpDQpmYWN0b3Jlcw0KYGBgDQpgYGB7cn0NCmZhY3RvcmVzX251bSA8LSBmYWN0b3IocmVwKGMoMiwgMyksIDMpKQ0KZmFjdG9yZXNfbnVtDQpgYGANCmBgYHtyfQ0KZmFjdG9yZXMNCmZhY3RvcmVzWzFdIDwtICdEJw0KZmFjdG9yZXMNCmBgYA0KTW9zdHJhciBsb3Mgbml2ZWxlcyBkZSB1biBmYWN0b3INCg0KYGBge3J9DQpsZXZlbHMoZmFjdG9yZXMpWzRdIDwtICJEIg0KbGV2ZWxzKGZhY3RvcmVzKQ0KDQpgYGANCmBgYHtyfQ0KZmFjdG9yZXMNCmZhY3RvcmVzWzFdIDwtICdEJw0KYGBgDQojIERhdGEgZnJhbWVzDQpgYGB7cn0NCk5vbWJyZSA8LSBjKCJBbmEiLCAiSnVhbiIsICJDbGF1ZGlhIikNCkVkYWQgPC0gYyg0NSwgNTIsIDI2KQ0KUGVzbyA8LSBjKDY0LCA3NSwgNjcpDQpgYGANCg0KQ29uIGxvcyB2ZWN0b3JlcyBjcmVhbW9zIGVsIERhdGEgRnJhbWUNCmBgYHtyfQ0KZGYgPC0gZGF0YS5mcmFtZShOb21icmUsIEVkYWQsIFBlc28pDQpkZg0KDQpgYGANCg0KYGBge3J9DQpjbGFzcyhkZikNCmBgYA0KDQpgYGB7cn0NCmNvbG5hbWVzKGRmKQ0KYGBgDQpgYGB7cn0NCnJvd25hbWVzKGRmKQ0KYGBgDQpNdWVzdHJhIGxhIGVzdHJ1Y3R1cmEgZGVsIGRhdGFmcmFtZQ0KYGBge3J9DQpzdHIoZGYpDQpgYGANCg0KIyMgQWNjZWRlciBhIGxvcyBlbGVtZW50b3MgZGVsIGRhdGFmcmFtZQ0KYGBge3J9DQpkZlsxXQ0KYGBgDQpgYGB7cn0NCmRmWyJOb21icmUiXQ0KYGBgDQoNCk90cmEgZm9ybWEgDQpgYGB7cn0NCmRmJE5vbWJyZQ0KYGBgDQoNCg0KDQoNCg0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkNsYXNlIDAzIg0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KIyMgRmFjdG9yZXMgDQpgYGB7cn0NCmZhY3RvcmVzIDwtIGZhY3RvcihyZXAoYygiQSIsICJCIiwgIkMiKSwgNSkpDQpmYWN0b3Jlcw0KYGBgDQpgYGB7cn0NCmZhY3RvcmVzX251bSA8LSBmYWN0b3IocmVwKGMoMiwgMyksIDMpKQ0KZmFjdG9yZXNfbnVtDQpgYGANCmBgYHtyfQ0KZmFjdG9yZXMNCmZhY3RvcmVzWzFdIDwtICdEJw0KZmFjdG9yZXMNCmBgYA0KTW9zdHJhciBsb3Mgbml2ZWxlcyBkZSB1biBmYWN0b3INCg0KYGBge3J9DQpsZXZlbHMoZmFjdG9yZXMpWzRdIDwtICJEIg0KbGV2ZWxzKGZhY3RvcmVzKQ0KDQpgYGANCmBgYHtyfQ0KZmFjdG9yZXMNCmZhY3RvcmVzWzFdIDwtICdEJw0KYGBgDQojIERhdGEgZnJhbWVzDQpgYGB7cn0NCk5vbWJyZSA8LSBjKCJBbmEiLCAiSnVhbiIsICJDbGF1ZGlhIikNCkVkYWQgPC0gYyg0NSwgNTIsIDI2KQ0KUGVzbyA8LSBjKDY0LCA3NSwgNjcpDQpgYGANCg0KQ29uIGxvcyB2ZWN0b3JlcyBjcmVhbW9zIGVsIERhdGEgRnJhbWUNCmBgYHtyfQ0KZGYgPC0gZGF0YS5mcmFtZShOb21icmUsIEVkYWQsIFBlc28pDQpkZg0KDQpgYGANCg0KYGBge3J9DQpjbGFzcyhkZikNCmBgYA0KDQpgYGB7cn0NCmNvbG5hbWVzKGRmKQ0KYGBgDQpgYGB7cn0NCnJvd25hbWVzKGRmKQ0KYGBgDQpNdWVzdHJhIGxhIGVzdHJ1Y3R1cmEgZGVsIGRhdGFmcmFtZQ0KYGBge3J9DQpzdHIoZGYpDQpgYGANCg0KIyMgQWNjZWRlciBhIGxvcyBlbGVtZW50b3MgZGVsIGRhdGFmcmFtZQ0KYGBge3J9DQpkZlsxXQ0KYGBgDQpgYGB7cn0NCmRmWyJOb21icmUiXQ0KYGBgDQoNCk90cmEgZm9ybWEgDQpgYGB7cn0NCmRmJE5vbWJyZQ0KYGBgDQpFeHRyYWVyIHVuIHZlY3RvciBkZSB1biBkYXRhIGZyYW1lDQpgYGB7cn0NCmRmX251ZXZvIDwtIGRmWyJFZGFkIl0NCmNsYXNzKGRmX251ZXZvKQ0KZGZfbnVldm8NCmBgYA0KRXh0cmFlciAiTm9tYnJlIiB5ICJQZXNvIg0KYGBge3J9DQpkZltjKDEsIDMpXQ0KYGBgDQoNCkxvIG1pc21vIGNvbiBsYSBldGlxdWV0YSBkZSBsYSB2YXJpYWJsZQ0KYGBge3J9DQpkZltjKCJOb21icmUiLCAiUGVzbyIpXQ0KYGBgDQoNCkFncmVnYXIgdW5hIGNvbHVtbmENCmBgYHtyfQ0KZGYgPC0gY2JpbmQoZGYsIENhc2FkbyA9IGMoJ1NpJywgJ1NpJywgJ05vJykpDQpkZg0KYGBgDQoNCkFjY2VkZXIgYSBsb3MgZG9zIHByaW1lcmFzIGZpbGFzDQpgYGB7cn0NCmRmWzE6MiwgXQ0KYGBgDQoNCkFsZ28gdW4gcG9jbyBtw6FzIGNvbXBsZWpvDQpgYGB7cn0NCmRmWzE6MywgYygiTm9tYnJlIiwgIlBlc28iKV0NCmBgYA0KQnVzY2FyIGNvbmRpY2lvbmVzIA0KYGBge3J9DQpkZltkZiRFZGFkIDwgMzAgJiBkZiRDYXNhZG8gPT0gJ05vJywgXQ0KYGBgDQojIyBNb2RpZmljYXIgbG9zIHZhbG9yZXMgZGUgdW4gZGF0YSBmcmFtZQ0KQWdyZWdhciB1biB0aXBvIGRlIGNvbnRyYXRvDQpgYGB7cn0NCmRmJFRpcG9fQ29udHJhdG8gPC0gYygiUHJlbWl1bSIsICJCYXNpY28iLCAiQmFzaWNvIikNCmRmDQpgYGANClRyYW5zZm9ybWFyIGxhIHZhcmlhYmxlIFRpcG9fY29udHJhdG8gYSB1biBmYWN0b3INCmBgYHtyfQ0KY2xhc3MoYXMuZmFjdG9yKGRmJFRpcG9fQ29udHJhdG8pKQ0KYGBgDQoNCkVsaW1pbmFyIHVuYSB2YXJpYWJsZQ0KYGBge3J9DQpkZiRQZXNvIDwtIE5VTEwNCmBgYA0KYGBge3J9DQpkZg0KYGBgDQpOb21icmVzIGRlIGxhcyBjb2x1bW5hcw0KYGBge3J9DQpjb2xuYW1lcyhkZikNCmBgYA0KYGBge3J9DQpmaWxhIDwtIGRhdGEuZnJhbWUoTm9tYnJlID0gJ1BhdWxhJywgRWRhZCA9IDQ1LCBDYXNhZG8gPSAnU2knLCBUaXBvX0NvbnRyYXRvID0gJ1ByZW1pdW0nKQ0KZmlsYQ0KDQpgYGANCkFncmVnYW1vcyBsYSBmaWxhIA0KYGBge3J9DQpkZiA8LSByYmluZChkZiwgZmlsYSkNCmBgYA0KYGBge3J9DQpkZg0KYGBgDQoNClZvbHZlbW9zIGEgYWdyZWdhciBsYSB2YXJpYWJsZSBQZXNvDQpgYGB7cn0NClBlc28gPC0gYyg2MCwgODIsIDkyLCA1NSkNCmRmIDwtIGNiaW5kKGRmLCBQZXNvKQ0KZGYNCg0KYGBgDQojIyBUdWJlcsOtYXMgKFBpcGUpDQpMb3MgdGlkeSBkYXRhDQpgYGB7cn0NCmRmX25vdGQgPC0gZGF0YS5mcmFtZShZZWFyPWMoMjAxNSwgMjAxNiwgMjAxNywgMjAxOCwgMjAxOSksIE1hcmlhPWMoNTUsIDYwLCA1NywgNjUsIDcwKSwgUGVwZT1jKDc1LCA4MCwgMTAwLCAxMTAsIDg1KSwgUGFjbyA9IGMoNzAsIDcyLCA3MSwgNzAsIDgwKSkNCmRmX25vdGQNCmBgYA0KT3RyYSBmb3JtYSBkZSBvYnNlcnZhciBsb3MgZGF0b3MNCmBgYHtyfQ0KDQpkZl93aWRlPC0gZGF0YS5mcmFtZShOb21icmU9YygiTWFyaWEiLCAiUGVwZSIsICJQYWNvIiksDQogICAgICAgICAgICAgICAgICAgICBZZWFyXzIwMTU9Yyg1NSwgNzUsIDcwKSwgDQogICAgICAgICAgICAgICAgICAgICBZZWFyXzIwMTY9Yyg2MCwgODAsIDcyKSwNCiAgICAgICAgICAgICAgICAgICAgIFllYXJfMjAxNz1jKDU3LCAxMDAsIDcxKSwNCiAgICAgICAgICAgICAgICAgICAgIFllYXJfMjAxOD1jKDY1LCAxMTAsIDcwKSwNCiAgICAgICAgICAgICAgICAgICAgIFllYXJfMjAxOT1jKDcwLCA4NSwgODApKQ0KZGZfd2lkZQ0KYGBgDQoNCiMjIFRpZHl2ZXJzZQ0KYGBge3J9DQpsaWJyYXJ5KGRwbHlyKQ0KbGlicmFyeSh0aWR5cikNCmBgYA0KQXBsaWNhciB1bmEgdHViZXLDrWEgcGFyYSBwYXNhciBkZSB1biB0aXBvIGRlIGRhdG8gYW5jaG8gYSB1biB0aWR5IA0KYGBge3J9DQpkZl9sb25nIDwtIGRmX3dpZGUgJT4lIGdhdGhlcigiWWVhciIsICJQZXNvIiwgMjo2KQ0KZGZfbG9uZw0KYGBgDQpBcGxpY2Ftb3MgZWwgaW52ZXJzbw0KYGBge3J9DQpkZl9sb25nICU+JSBzcHJlYWQoIlllYXIiLCAiUGVzbyIpDQoNCmBgYA0KIyMgT3BlcmFkb3JlcyBsw7NnaWNvcyANCmBgYHtyfQ0KeCA8LSAxMA0KeCA+IDcgJiB4ID4gMjANCmBgYA0KDQpgYGB7cn0NCiFUUlVFDQpgYGANCmBgYHtyfQ0KIWlzLm51bWVyaWMoNSkNCmBgYA0K</div>
 
 
 
