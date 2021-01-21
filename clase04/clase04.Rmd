@@ -1,0 +1,163 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+# Condicionales
+```{r}
+x <- -4
+if(x < 5){
+  print("el número es negativo")
+}else{
+  print("El número es positivo")
+}
+```
+
+```{r}
+x <- -5
+
+if(x < 0){
+  print("x es un número negativo")
+}else if (x > 0){
+  print("x es un número positivo")
+}else{
+  print("x es igual cero")2
+}
+```
+
+Identifica si un número es divisible por 6
+```{r}
+x <- 12L
+
+logic <- as.numeric(is.integer(x))
+
+if (logic == 0){
+  print("Debe ingresar un número entero")
+}else if(x %% 2 == 0 & x %% 3 == 0){
+  print("El número es divisible por 6")
+}else{
+  print("El número no es divisible por 6")
+}
+```
+
+# Ciclos
+## While
+```{r}
+a <- 1
+while(a <=7){
+  print(paste("La variable es igual a:", a))
+  a <- a + 1
+}
+```
+## Break
+```{r}
+ctr <- 1 
+while(ctr <= 7){
+  if(ctr %% 5 == 0){
+    break
+  }
+  print(paste("ctr es igual a", ctr))
+  ctr <- ctr + 1
+}
+```
+
+# Ciclos for
+```{r}
+ciudades <- c("Talca","Santiago", "Osorno", "Arica", "Coquimbo" )
+
+for(ciudad in ciudades){
+  print(ciudad)
+}
+```
+
+## for con break
+```{r}
+for(ciudad in ciudades){
+  if(nchar(ciudad) == 6){
+    break
+  }
+  print(ciudad)
+}
+```
+## for con next
+```{r}
+for(ciudad in ciudades){
+  if(nchar(ciudad) == 6){
+    next
+  }
+  print(ciudad)
+}
+```
+
+Otra forma
+```{r}
+ciudades <- c("Talca","Santiago", "Osorno", "Arica", "Coquimbo" )
+
+for(i in 1:length(ciudades)){
+  print(ciudades[i])
+  }
+```
+```{r}
+for(i in seq(1,7, by=2))
+
+ print(i)
+```
+
+# Funciones
+```{r}
+valores <- c(1, 5, 6, 7)
+mi_ds <- sd(valores)
+mi_ds
+```
+
+
+```{r}
+#?sd
+args(sd)
+```
+
+El triple de un número
+```{r}
+triple <- function(x){
+  y <- 3 * x
+  return(y)
+}
+```
+Muestra las variables cargadas en el espacio de trabajo
+```{r}
+ls()
+```
+
+```{r}
+triple(5)
+```
+```{r}
+matemagica <- function(a, b = 1){
+  if(b == 0){
+    return(0)
+  }
+  y <- a*b + a/b
+  return(y)
+}
+```
+```{r}
+matemagica(5, 3)
+```
+# Tidyverse
+```{r}
+library('readr')
+ls("package:readr", all=TRUE)
+```
+```{r}
+help(read_csv, package ="readr")
+```
+
+```{r}
+names(iris)
+```
+```{r}
+summary(iris)
+```
+```{r}
+str(iris)
+```
+
