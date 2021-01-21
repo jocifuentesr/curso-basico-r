@@ -20,7 +20,7 @@ if(x < 0){
 }else if (x > 0){
   print("x es un número positivo")
 }else{
-  print("x es igual cero")2
+  print("x es igual cero")
 }
 ```
 
@@ -159,5 +159,159 @@ summary(iris)
 ```
 ```{r}
 str(iris)
+```
+## Importar un archivo csv
+```{r}
+getwd()
+```
+```{r}
+write_csv(iris, "iris.csv")
+```
+
+Importar un archivo csv
+```{r}
+iris_imp_csv <- read_csv("iris.csv")
+```
+```{r}
+iris_imp_csv2 <- read_delim("iris.csv", delim =",")
+```
+Descargar datos desde Internet
+```{r}
+url <- "https://raw.githubusercontent.com/datasciencelabs/data/master/bio260-heights.csv"
+datos <- read_csv(url)
+```
+Rbase
+```{r}
+read.csv("iris.csv", stringsAsFactors = TRUE)
+```
+## Data wrangling
+```{r}
+x1 <- c(-5:5, NA)
+mean(x1[x1>0], na.rm = TRUE)
+```
+```{r}
+library(tidyverse)    #------- ahora haremos lo mismo pero con el operador pipe
+x1 %>% .[.>0] %>% mean(., na.rm = TRUE)
+```
+## Separate y unite
+```{r}
+df <- data.frame( names = c("Pedro_Navaja", "Bob_Dylan", "Cid_Campeador"), 
+                  year  = c(1978, 1941, 1048) )
+df
+```
+
+```{r}
+df_a <- df %>% separate(names, c("Nombre", "Apellido", sep ="_"))
+df_a
+
+```
+```{r}
+df_b <- df_a %>% unite(Nombre_y_Apellido, Nombre:Apellido, sep = "&")
+df_b
+```
+
+#DPLYR
+Es necesario cargar el paquete gapminder
+```{r}
+library(gapminder)
+df <- gapminder
+head(gapminder)
+```
+## Filtros
+```{r}
+Chile <- df %>% filter(country == "Chile")
+Chile
+```
+
+```{r}
+exp_vida <- df %>% filter(lifeExp < 29)
+exp_vida
+```
+Otros filtros
+```{r}
+#- filas con valores de "lifeExp" entre [29, 32]
+aa <- df %>% filter(lifeExp >=  29 , lifeExp <= 32)   
+aa <- df %>% filter(lifeExp >=  29 &  lifeExp <= 32)  
+aa <- df %>% filter(between(lifeExp, 29, 32))       
+
+#- observaciones de paises de Africa con lifeExp > 32
+aa <- df %>% filter(lifeExp > 72 &  continent == "Africa") 
+
+#- observaciones de paises de Africa o Asia con lifeExp > 32
+aa <- df %>% filter(lifeExp > 72 &  continent %in% c("Africa", "Asia") )  
+aa <- df %>% filter(lifeExp > 72 & (continent == "Africa" | continent == "Asia") )
+```
+## slice y top
+```{r}
+aa <- df %>% slice(c(10:15)) 
+aa
+```
+```{r}
+aa <- df %>% top_n(3, lifeExp)
+aa
+```
+```{r}
+aa <- df %>% top_n(-4, pop) 
+aa
+```
+
+## Arrange
+```{r}
+df <- gapminder
+```
+```{r}
+#- ordena las filas de MENOR a mayor según los valores de la v. lifeExp 
+aa <- df %>% arrange(lifeExp)
+head(aa)
+```
+```{r}
+#- ordena las filas de MAYOR a menor según los valores de la v. lifeExp
+aa <- df %>% arrange(desc(lifeExp))  
+```
+
+```{r}
+#- ordenada las filas de MENOR a mayor según los valores de la v. lifeExp. 
+#- Si hay empates se resuelve con la variable "pop"
+aa <- df %>% arrange(lifeExp, pop) 
+
+```
+## Rename
+```{r}
+df <- gapminder
+
+#- cambia los nombres de lifeExp y gdpPercap a life_exp y gdp_percap 
+df %>% rename(life_exp = lifeExp,  gdp_percap = gdpPercap)
+```
+
+```{r}
+#install.packages('dplyr')
+library("dplyr")
+aa <- df %>% select(year, lifeExp) 
+aa <- df %>% select(c(year, lifeExp))
+aa
+```
+## Quitar variables
+```{r}
+#aa <- df %>% select(-year)
+#quitamos year y lifeExp
+aa <- df %>% select(-c(year, lifeExp))
+aa
+```
+## Mutate
+```{r}
+library(gapminder)
+df <- gapminder
+aa <- df %>% mutate(GDP = pop*gdpPercap)
+aa
+```
+
+
+## Agrupar 
+```{r}
+library(gapminder)
+#- tomamos df y lo agrupamos por grupos definidos por la variable "continent"; osea, habrá 5 grupos
+#- después con summarise() calcularemos el nº de observaciones en cada continente o grupo; es decir, nos retornará un df con una fila por cada continente
+aa <- df %>% group_by(continent) %>%  summarise(NN = n()) 
+aa
 ```
 
