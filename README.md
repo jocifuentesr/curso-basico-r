@@ -13,5 +13,19 @@ Revisaremos diferentes flujos de trabajo y como integrar las herramientas dispon
 - Visualización de datos con ggplot2
 - Correlaciones y regresiones con R
 
-## Enlaces a las grabaciones
-- [Primera sesión 18-01-2021](https://drive.google.com/drive/folders/1Hh1C_r2qHQZvzhoaVIKrItN01vAr4fWK?usp=sharing)] 
+## Libros y enlaces recomendados
+- [R para ciencia de datos](https://r4ds-en-espaniol.netlify.app/)
+- [R para Análisis Científicos Reproducibles](https://swcarpentry.github.io/r-novice-gapminder-es/)
+- [Libro de R para principiantes](https://bookdown.org/jboscomendoza/r-principiantes4)
+- [Otro libro de R para principiantes](https://cran.r-project.org/doc/contrib/rdebuts_es.pdf)
+- [Crear una cuenta en Rcloud](https://rstudio.cloud/)
+- [Instalar R y Rstudio - (guía pdf)](http://www.upm.es/sfs/Rectorado/Gabinete%20del%20Rector/Notas%20de%20Prensa/2015/05/documentos/Instrucciones%20de%20instalaci%C3%B3n%20de%20R%20y%20RStudio.pdf)
+
+## Otros recursos no relacionados con R
+### Herramientas para dibujar en la pizarra
+- [Point to fix](http://www.pointofix.de/download.php)
+- [Epic pen](https://epic-pen.com/)
+- [Pylote](http://pascal.peter.free.fr/pylote-en.html)
+
+### Editor Markdown multiplataforma
+- [Typora](https://typora.io/)
