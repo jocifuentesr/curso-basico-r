@@ -29,3 +29,4 @@ Revisaremos diferentes flujos de trabajo y como integrar las herramientas dispon
 
 ### Editor Markdown multiplataforma
 - [Typora](https://typora.io/)
+- [Visual studio code](https://code.visualstudio.com/)
