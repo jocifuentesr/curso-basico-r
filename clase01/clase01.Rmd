@@ -41,7 +41,7 @@ class(var1)
 var1 <- as.numeric(var1)
 class(var1)
 ```
-Tranformar a cadena
+Transformar a cadena
 ```{r}
 var1 <- as.character(var1)
 var1
@@ -64,7 +64,7 @@ Para crear un vector se ocupa el método **c**. Por ejemplo:
 x <- c(3, 2, 2, 10)
 x
 ```
-El operador : genera secuencias de valores
+El operador: genera secuencias de valores
 ```{r}
 y <- 1:4
 y

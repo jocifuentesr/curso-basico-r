@@ -28,72 +28,62 @@ class(var1)
 var1 <- as.character(var1)
 var1
 
-Aplicar dos métodos distintos a la misma variable
+# Aplicar dos métodos distintos a la misma variable
 var2 <- as.numeric((as.logical(var2)))
 var2
-```
-```{r}
+
 var3 <- FALSE
 var3 <- as.character(var3)
 var3
-```
+
 ## Tipos de estructuras
 ### Vectores
-Para crear un vector se ocupa el método **c**. Por ejemplo: 
-```{r}
+# Para crear un vector se ocupa el método **c**. Por ejemplo:
 x <- c(3, 2, 2, 10)
 x
-```
-El operador : genera secuencias de valores
-```{r}
+
 y <- 1:4
 y
-```
-Crear una secuencia
-```{r}
+
+# Crear una secuencia
 z <- seq(1, 6, by = 2)
 z
-```
-También podemos repetir elementos
-```{r}
+# También podemos repetir elementos
 w <- rep("¿profe es con nota?", 5)
 w
-```
 
-Un vector acepta datos del mismo tipo 
-```{r}
+# Un vector acepta datos del mismo tipo
+
 x1 <- c(1, 2, "a")
 x1
-```
-Lo mismo 
-```{r}
+
+# Lo mismo
+
 x2 <- c(TRUE, FALSE, 1)
 class(x2)
-```
-### Operaciones
-Medir la longitud
-```{r}
-length(x)
-```
 
-Cambiar la longitud de un vector
-```{r}
+### Operaciones
+# Medir la longitud
+
+length(x)
+
+
+# Cambiar la longitud de un vector
 length(x) <- 10
 x
-```
-Volver a la normalidad
-```{r}
+
+#Volver a la normalidad
+
 length(x) <-4 
 x
-```
+
 ## Operaciones entre vectores
-```{r}
+
 x ; y
-```
-Suma
-```{r}
+
+# Suma
+
 x + y
-```
 # Reciclaje de elementos
 z <- c(5, 4, 1)
 y ; z
