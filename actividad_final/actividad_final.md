@@ -16,4 +16,4 @@
 - Hasta tres personas
 
 ## Fecha límite de entrega 
-Lunes 25 de enero a las 23:59 (GMT-3)
+- agregar la fecha límite de entrega
