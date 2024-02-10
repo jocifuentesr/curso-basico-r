@@ -1,8 +1,3 @@
----
-title: "Clase 03"
-output: html_notebook
----
-
 ## Factores 
 ```{r}
 factores <- factor(rep(c("A", "B", "C"), 5))

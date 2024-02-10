@@ -1,8 +1,3 @@
----
-title: "Primera clase"
-output: html_notebook
----
-
 ## Crear variables en R
 ```{r}
 var1 <- 5

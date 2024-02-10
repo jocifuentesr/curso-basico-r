@@ -1,8 +1,3 @@
----
-title: "Clase 02"
-output: html_notebook
----
-
 ## Operaciones entre conjuntos
 ```{r}
 a <- 1:10; a

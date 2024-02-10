@@ -2,3 +2,6 @@
 .idea
 .Rproj.user
 .Rhistory
+.Rproj
+*_files
+*.html
