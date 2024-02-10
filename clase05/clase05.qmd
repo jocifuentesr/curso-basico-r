@@ -1,0 +1,10 @@
+# Gráficas con ggplot y regresión lineal simple
+
+```{r}
+library("ggplot2")
+library("gapminder")
+```
+## Sintaxis con modelo de capas
+```
+ggplot(data = <DATOS>, mapping = aes(<MAPEOS>)) +  <GEOM_FUNCIÓN>()
+```
